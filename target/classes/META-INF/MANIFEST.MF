@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Export-Package: org.xnap.commons.i18n;version="0.9.9.SNAPSHOT"
+Bundle-Version: 0.9.9.SNAPSHOT
+Build-Jdk: 1.7.0_79
+Built-By: Admin
+Tool: Bnd-1.50.0
+Bnd-LastModified: 1454543665383
+Bundle-Name: Gettext Commons
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven Bundle Plugin
+Bundle-Description: A library that supports gettext-based internationa
+ lization        (i18n) of Java applications.
+Bundle-License: http://www.gnu.org/licenses/lgpl.html
+Bundle-SymbolicName: translator
+Originally-Created-By: Apache Maven Bundle Plugin
+
