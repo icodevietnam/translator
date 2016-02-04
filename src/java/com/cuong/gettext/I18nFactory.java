@@ -1,24 +1,4 @@
-/*
- *  Gettext Commons
- *
- *  Copyright (C) 2005  Felix Berger
- *  Copyright (C) 2005  Steffen Pingel
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
-package org.xnap.commons.i18n;
+package com.cuong.gettext;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,22 +6,6 @@ import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.Properties;
 
-/**
- * Factory class that creates and caches I18n instances.
- * <p>
- * Given a {@link Class} object the factory looks up the resource bundle
- * responsible for handling message translations. The bundle is returned with an
- * {@link I18n} object wrapped around it, which provides the translation
- * methods. The lookup is described at {@link #getI18n(Class,String)}.
- * <p>
- * Use the factory for creating <code>I18n</code> objects to make sure no
- * extraneous objects are created.
- * 
- * @author Felix Berger
- * @author Tammo van Lessen
- * @author Steffen Pingel
- * @since 0.9
- */
 public class I18nFactory {
 
 	private static final String BASENAME_KEY = "basename";

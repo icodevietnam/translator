@@ -1,24 +1,4 @@
-/*
- *  Gettext Commons
- *
- *  Copyright (C) 2005  Felix Berger
- *  Copyright (C) 2005  Steffen Pingel
- *
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
- *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
-package org.xnap.commons.i18n;
+package com.cuong.gettext;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,7 +14,7 @@ import java.util.Map;
  * @author Steffen Pingel
  */
 class I18nCache {
-	
+
 	/**
 	 * Map<String, List<I18n>>, list is synchronized too.
 	 */
@@ -54,7 +34,7 @@ class I18nCache {
 		if (locale == null) {
 			throw new NullPointerException("locale is null");
 		}
-		
+
 		List list = (List)i18nByPackage.get(packageName);
 		if (list != null) {
 			synchronized (list) {
@@ -86,7 +66,7 @@ class I18nCache {
 	{
 		List[] lists;
 		synchronized (i18nByPackage) {
-			 lists = (List[])i18nByPackage.values().toArray(new List[0]);
+			lists = (List[])i18nByPackage.values().toArray(new List[0]);
 		}
 		for (int i = 0; i < lists.length; i++) {
 			List list = lists[i];
@@ -100,9 +80,9 @@ class I18nCache {
 	}
 
 	public static interface Visitor {
-		
+
 		void visit(I18n i18n);
-		
+
 	}
 
 }
